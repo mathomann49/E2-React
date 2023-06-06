@@ -122,20 +122,19 @@ link {
   padding: 10px 5px;
   border-radius: 5px;
   border: solid 1px #999;
+  font-family: Arial, sans-serif;
 }
 
-.buttonCreate,
-.buttonClear {
+.buttonCreate {
   border: solid 1px black;
   border-radius: 3px;
-  background-color: #cfbe27;
+  background-color: #0080FF;
   color: #3b2d38;
   padding: 3px 10px;
 }
 
-.buttonClear {
-  background-color: #f02475;
-}
+
+
 
 .todosContainer {
   display: flex;
@@ -148,13 +147,31 @@ link {
 }
 
 .todosItem {
-  flex-grow: 1;
+  display: flex;
   width: 100%;
-  padding: 10px;
+  padding: 5px;
   border-radius: 5px;
   border: solid 1px #3b2d38;
-  background-color: #f27435;
+  background-color: #f2b935;
   font-size: 20px;
+  /* flex: 1; */
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.todoText {
+  flex: 1;
+}
+
+.btnTrash {
+  width: 25px;
+  height:25px;
+  background-image: url(delete.png);
+  background-color: transparent;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
 }
 
 /* Not found */

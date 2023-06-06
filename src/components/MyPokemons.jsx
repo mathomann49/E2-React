@@ -14,7 +14,7 @@ const MyPokemons = () => {
   useEffect(() => {
     
     axios.get(url).then((response) => {
-      // console.log(response);
+      
       setData(response.data);
       setName(response.data.name)
       setWeight(response.data.weight)
@@ -29,11 +29,11 @@ const MyPokemons = () => {
 
   return (
     <div className='cardContainer'>
-         {/* <h1>Pokemon</h1>  */}
+        
         <img className="pokelogo"  src={pokelogo} alt="poke-logo"/>
         <div className='inputContainer'><input type={"number"} placeholder="use ⬆️ or ⬇️" onChange={(e) => {setNumber(e.target.value)}}  />
         </div>
-        <img src={data? data.sprites.other.dream_world.front_default : "<p>Loading</p>"} alt="pokemon"/>
+        <img src={data? data.sprites.other.dream_world.front_default : "<p>Loading...</p>"} alt="pokemon"/>
         <div className="pokeInfo">
           <h3>🔥 Name: <span>{name}</span></h3>
           <h3>🔥 Weight: <span>{weight}</span></h3>
